@@ -1,0 +1,311 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Onion Packer</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+	<section class="banner" role="banner">
+        <header id="header">
+            <div class="header-content clearfix">
+                <a class="logo" href="#"><img src="images/logo-square.png" alt=""></a>
+                <nav class="navigation" role="navigation">
+                    <ul class="primary-nav">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#works">Screenshots</a></li>
+                        <li><a href="#teams">Meet the Team</a></li>
+                        <!--<li><a href="#testimonials">Testimonials</a></li>-->
+                        <li><a href="#download">Download</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="nav-toggle">Menu<span></span></a>
+            </div><!-- header content -->
+        </header><!-- header -->
+        <div id="banner" class="container">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="banner-text text-center">
+                    <h1>Onion Packer</h1>
+                    <p>Keep your favorite textures well organized and ready to use</p>
+                    <hr/>
+                    <div class="prices">
+                      <div class="price-text">Name your price: </div>
+                      <a class="price-item btn btn-default" href="https://www.paypal.me/mikepicker/5">€ 5</a>
+                      <a class="price-item btn btn-default" href="https://www.paypal.me/mikepicker/10">€ 10</a>
+                      <a class="price-item btn btn-default" href="https://www.paypal.me/mikepicker/20">€ 20</a>
+                      <input id="custom-price" class="price-item" type="text" value="€ custom"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
+                    </div>
+                    <a id="download-button" class="btn btn-large">Download</a>
+                </div><!-- banner text -->
+            </div>
+        </div>
+    </section><!-- banner -->
+    <section id="features" class="features section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 feature text-center">
+                    <span class="icon icon-tools"></span>
+                    <div class="feature-content">
+                        <h5>Easy to use</h5>
+                        <p>Simply drag and drop your folders and search them easily.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 feature text-center">
+                    <span class="icon icon-desktop"></span>
+                    <div class="feature-content">
+                        <h5>Flawless Integration</h5>
+                        <p>Use Onion Packer along with your favorite designing software. Picking up the right texture has never been so fast!</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 feature text-center">
+                    <span class="icon icon-lightbulb"></span>
+                    <div class="feature-content">
+                        <h5>Smart and Fast</h5>
+                        <p>Onion Packer has been designed to be as smartest as possible from the ground up: your textures are just a click away!</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 feature text-center">
+                    <span class="icon icon-picture"></span>
+                    <div class="feature-content">
+                        <h5>3D Preview</h5>
+                        <p>Onion Packer features a built-in 3D preview for your textures, so you can have a quick idea of how it will be rendered in a 3D scene.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 feature text-center">
+                    <span class="icon icon-genius"></span>
+                    <div class="feature-content">
+                        <h5>Cross Platform</h5>
+                        <p>Thanks to the powerful Electron framework, Onion Packer runs smoothly on Linux, Windows and MacOS.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 feature text-center">
+                    <span class="icon icon-heart"></span>
+                    <div class="feature-content">
+                        <h5>Made with Love</h5>
+                        <p>We are only driven by passion, that's why we decided to make Onion Packer fully Open Source. Support us on <a href="https://github.com/Mikepicker/onion-packer">Github!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- features -->
+
+    <section id="works" class="works section no-padding">
+      <div class="screenshot container-fluid">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <img class="screenshot-img" src="images/op_1.png" alt="">
+        </div>
+        <div class="screenshot-text col-lg-6 col-md-6 col-sm-6">
+          Your textures, in the right place, at your fingertips.</br> Once you drag & drop your textures onto Onion Packer, watch it do the rest!
+        </br> Onion Packer automatically tags your textures based on the folder they were, then you can easily re-tag and search them.
+        </div>
+      </div>
+      <div class="screenshot container-fluid">
+        <div class="screenshot-text col-lg-6 col-md-6 col-sm-6">
+          The tags panel lets you create and manage your tags easily. You can assign textures to a tag.</br>
+          Onion Packer clones your images in a separate directory, where each tag corresponds to a folder, so you can easily export them where you want!
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <img class="screenshot-img" src="images/op_2.png" alt="">
+        </div>
+      </div>
+      <div class="screenshot container-fluid">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <img class="screenshot-img" src="images/op_3.png" alt="">
+        </div>
+        <div class="screenshot-text col-lg-6 col-md-6 col-sm-6">
+          Thanks to the <a href="https://threejs.org/">three.js</a> integration, Onion Packer lets you preview your textures to give you a quick idea
+          of how they will be rendered in a 3D scene.
+        </div>
+      </div>
+    </section>
+    <!--<section id="works" class="works section no-padding">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-3 col-md-6 col-sm-6 work">
+                    <a href="images/op_1.png" class="work-box">
+                        <img src="images/op_1.png" alt="">
+                        <div class="overlay">
+                            <div class="overlay-caption">
+                                <h5>Project Name</h5>
+                                <p>Website Design</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 work">
+                    <a href="images/op_2.png" class="work-box">
+                        <img src="images/op_2.png" alt="">
+                        <div class="overlay">
+                            <div class="overlay-caption">
+                                <h5>Project Name</h5>
+                                <p>Website Design</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 work">
+                    <a href="images/op_3.png" class="work-box">
+                        <img src="images/op_3.png" alt="">
+                        <div class="overlay">
+                            <div class="overlay-caption">
+                                <h5>Project Name</h5>
+                                <p>Website Design</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 work">
+                    <a href="images/op_3.png" class="work-box">
+                        <img src="images/op_3.png" alt="">
+                        <div class="overlay">
+                            <div class="overlay-caption">
+                                <h5>Project Name</h5>
+                                <p>Website Design</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <section id="teams" class="section teams">
+        <div class="container">
+            <div class="row">
+                <div class="person-col col-md-6 col-sm-6">
+                    <div class="person">
+                        <!--<img src="images/michele.jpg" alt="" class="img-responsive">-->
+                        <div class="person-content">
+                            <h4>Michele Rullo</h4>
+                            <h5 class="role">Development</h5>
+                        </div>
+                        <!--<ul class="social-icons clearfix">
+                            <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="#" class=""><span class="fa fa-linkedin"></span></a></li>
+                            <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li>
+                            <li><a href="#" class=""><span class="fa fa-dribbble"></span></a></li>
+                        </ul>-->
+                    </div><!-- person -->
+                </div>
+                <div class="person-col col-md-6 col-sm-6">
+                    <div class="person">
+                        <!--<img src="images/team-4.jpg" alt="" class="img-responsive">-->
+                        <div class="person-content">
+                            <h4>Andrea Cipollone</h4>
+                            <h5 class="role">Design</h5>
+                        </div>
+                        <!--<ul class="social-icons clearfix">
+                            <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="#" class=""><span class="fa fa-linkedin"></span></a></li>
+                            <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li>
+                            <li><a href="#" class=""><span class="fa fa-dribbble"></span></a></li>
+                        </ul>-->
+                    </div><!-- person -->
+                </div>
+            </div>
+        </div>
+    </section><!-- teams -->
+
+    <section id="download" class="section download">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h3>Give Onion Packer a Try, Download Now!</h3>
+                <a href="#banner" class="btn btn-large">Download!</a>
+            </div>
+        </div>
+    </section><!-- download -->
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-12">
+                        <h5>Share with Love</h5>
+                        <ul class="footer-share">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/kamal_chaneman"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/kamalchaneman"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- footer top -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="col-md-12">
+                    <p>Copyright © 2017 OnionPacker. All Rights Reserved<br>Made with <i class="fa fa-heart pulse"></i> by <a href="http://kamalchaneman.com/">Michele Rullo & Andrea Cipollone</a></p>
+                </div>
+            </div>
+        </div>
+    </footer><!-- footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/retina.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-XXXX-X');
+        ga('send', 'pageview');*/
+
+        $(document).ready(function() {
+
+          $("#download-button").click(function() {
+            window.location.href='https://www.paypal.me/mikepicker/' + $("#custom-price").val();
+          });
+
+          $("#custom-price").focus(function() {
+            if ($("#custom-price").val() === '€ custom') {
+              $("#custom-price").val('');
+            }
+          });
+
+          $("#custom-price").keyup(function() {
+            if ($("#custom-price").val().length > 0) {
+              $("#download-button").fadeIn();
+            } else {
+              $("#download-button").fadeOut();
+            }
+          });
+
+          $("#custom-price").focusout(function() {
+            if ($("#custom-price").val().length === 0) {
+              $("#custom-price").val('€ custom');
+            }
+          });
+
+      });
+    </script>
+</body>
+</html>
