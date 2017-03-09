@@ -287,23 +287,22 @@ ul li {
 .prices {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   margin: 32px 0 32px 0;
 }
 
 .price-text {
-  flex: 1;
+  width: 100%;
+  text-align: center;
   font-size: 18px;
-  max-width: 150px;
-  margin-right: 10px;
 }
 
 .price-item {
   flex: 1;
-  flex-grow: 0;
-  margin-left: 10px;
+  margin: 5px 5px 5px 5px;
+  border-radius: 20px;
 }
 
 input[type=text] {
@@ -414,19 +413,26 @@ input[type=submit] {
 
 .screenshot {
   margin-top: 40px;
+  padding: 0 10% 0 10%;
 }
 
 .screenshot-img {
   display: block;
+  max-height: 500px;
   margin: auto;
   box-shadow: 4px 4px 10px #888888;
 }
 
 .screenshot-text {
-  margin-top: 10%;
-  text-align: left;
-  font-size: 20px;
+  margin-top: 5%;
+  text-align: center;
+  font-size: 18px;
   padding: 0 10% 10% 10%;
+}
+
+.screenshot-title {
+  font-size: 28px;
+  font-weight: 500;
 }
 /* ==========================================================================
 	$Teams
