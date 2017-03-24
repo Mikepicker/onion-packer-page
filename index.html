@@ -54,8 +54,8 @@
                     </div>
                     <div class="download-button-container">
                       <a id="download-button-win" class="btn btn-large" type="submit" href="onion-packer-win32-x64.rar">Download for Windows</a>
-                      <a id="download-button-linux" class="btn btn-large" href="onion-packer-linux-x64.rar">Download for Linux</a>
-                      <a id="download-button-osx" class="btn btn-large" href="onion-packer-darwin-x64.rar">Download for Mac</a>
+                      <!--<a id="download-button-linux" class="btn btn-large" href="https://app.box.com/s/9moxr4l0x5zbuz6x432vlldrhczs1khk">Download for Linux</a>
+                      <a id="download-button-osx" class="btn btn-large" href="https://app.box.com/s/rfcw3pojuukrh1q9cvi442zg5pwwi4eg">Download for Mac</a>-->
                     </div>
                 </div><!-- banner text -->
             </div>
@@ -292,6 +292,18 @@
             }, 1000);
         }
 
+        function showDownload() {
+          $("#download-button-win").fadeIn();
+          /*$("#download-button-linux").fadeIn();
+          $("#download-button-osx").fadeIn();*/
+        }
+
+        function hideDownload() {
+          $("#download-button-win").fadeOut();
+          /*$("#download-button-linux").fadeOut();
+          $("#download-button-osx").fadeOut();*/
+        }
+
         $(document).ready(function() {
 
           var url;
@@ -300,9 +312,7 @@
             $("#5").addClass("price-item-selected");
             $("#10").removeClass("price-item-selected");
             $("#20").removeClass("price-item-selected");
-            $("#download-button-win").fadeIn();
-            $("#download-button-linux").fadeIn();
-            $("#download-button-osx").fadeIn();
+            showDownload();
             url = 'https://www.paypal.me/mikepicker/5'
           });
 
@@ -310,9 +320,7 @@
             $("#10").addClass("price-item-selected");
             $("#5").removeClass("price-item-selected");
             $("#20").removeClass("price-item-selected");
-            $("#download-button-win").fadeIn();
-            $("#download-button-linux").fadeIn();
-            $("#download-button-osx").fadeIn();
+            showDownload();
             url = 'https://www.paypal.me/mikepicker/10'
           });
 
@@ -321,9 +329,7 @@
             $("#20").addClass("price-item-selected");
             $("#10").removeClass("price-item-selected");
             $("#5").removeClass("price-item-selected");
-            $("#download-button-win").fadeIn();
-            $("#download-button-linux").fadeIn();
-            $("#download-button-osx").fadeIn();
+            showDownload();
             url = 'https://www.paypal.me/mikepicker/20'
           });
 
@@ -350,14 +356,10 @@
               $("#5").removeClass("price-item-selected");
               $("#10").removeClass("price-item-selected");
               $("#20").removeClass("price-item-selected");
-              $("#download-button-win").fadeIn();
-              $("#download-button-linux").fadeIn();
-              $("#download-button-osx").fadeIn();
+              showDownload();
               url='https://www.paypal.me/mikepicker/' + $("#custom-price").val();
             } else {
-              $("#download-button-win").fadeOut();
-              $("#download-button-linux").fadeOut();
-              $("#download-button-osx").fadeOut();
+              hideDownload();
             }
           });
 
