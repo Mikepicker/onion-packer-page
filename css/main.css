@@ -305,6 +305,10 @@ ul li {
   border-radius: 20px;
 }
 
+.price-item-selected {
+  background-color: #222222;
+}
+
 input[type=text] {
   background-color: #444444;
   color: #fff;
@@ -328,8 +332,18 @@ input[type=submit] {
   color: #fff;
 }
 
-#download-button {
+.download-button-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#download-button-win, #download-button-linux, #download-button-osx {
+  flex: 1;
   display: none;
+  margin: 8px;
 }
 
 /* ==========================================================================

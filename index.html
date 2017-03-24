@@ -46,13 +46,17 @@
                     <hr/>
                     <div class="price-text">Name your price</div>
                     <div class="prices">
-                      <a class="price-item btn btn-default" href="https://www.paypal.me/mikepicker/5">€ 5</a>
-                      <a class="price-item btn btn-default" href="https://www.paypal.me/mikepicker/10">€ 10</a>
-                      <a class="price-item btn btn-default" href="https://www.paypal.me/mikepicker/20">€ 20</a>
+                      <a id="5" class="price-item btn btn-default">€ 5</a>
+                      <a id="10" class="price-item btn btn-default">€ 10</a>
+                      <a id="20" class="price-item btn btn-default">€ 20</a>
                       <input id="custom-price" class="price-item" type="text" value="€ custom"
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
                     </div>
-                    <a id="download-button" class="btn btn-large">Download</a>
+                    <div class="download-button-container">
+                      <a id="download-button-win" class="btn btn-large" type="submit" href="onion-packer-win32-x64.rar">Download for Windows</a>
+                      <a id="download-button-linux" class="btn btn-large" href="onion-packer-linux-x64.rar">Download for Linux</a>
+                      <a id="download-button-osx" class="btn btn-large" href="onion-packer-darwin-x64.rar">Download for Mac</a>
+                    </div>
                 </div><!-- banner text -->
             </div>
         </div>
@@ -282,10 +286,57 @@
         ga('create', 'UA-XXXX-X');
         ga('send', 'pageview');*/
 
+        function goToUrl(url) {
+            setTimeout(function() {
+                window.location.href = url;
+            }, 1000);
+        }
+
         $(document).ready(function() {
 
-          $("#download-button").click(function() {
-            window.location.href='https://www.paypal.me/mikepicker/' + $("#custom-price").val();
+          var url;
+
+          $("#5").click(function() {
+            $("#5").addClass("price-item-selected");
+            $("#10").removeClass("price-item-selected");
+            $("#20").removeClass("price-item-selected");
+            $("#download-button-win").fadeIn();
+            $("#download-button-linux").fadeIn();
+            $("#download-button-osx").fadeIn();
+            url = 'https://www.paypal.me/mikepicker/5'
+          });
+
+          $("#10").click(function() {
+            $("#10").addClass("price-item-selected");
+            $("#5").removeClass("price-item-selected");
+            $("#20").removeClass("price-item-selected");
+            $("#download-button-win").fadeIn();
+            $("#download-button-linux").fadeIn();
+            $("#download-button-osx").fadeIn();
+            url = 'https://www.paypal.me/mikepicker/10'
+          });
+
+          $("#20").click(function() {
+            $("#custom-price").val('€ custom');
+            $("#20").addClass("price-item-selected");
+            $("#10").removeClass("price-item-selected");
+            $("#5").removeClass("price-item-selected");
+            $("#download-button-win").fadeIn();
+            $("#download-button-linux").fadeIn();
+            $("#download-button-osx").fadeIn();
+            url = 'https://www.paypal.me/mikepicker/20'
+          });
+
+          $("#download-button-win").click(function() {
+            goToUrl(url);
+          });
+
+          $("#download-button-linux").click(function() {
+            goToUrl(url);
+          });
+
+          $("#download-button-osx").click(function() {
+            goToUrl(url);
           });
 
           $("#custom-price").focus(function() {
@@ -296,9 +347,17 @@
 
           $("#custom-price").keyup(function() {
             if ($("#custom-price").val().length > 0) {
-              $("#download-button").fadeIn();
+              $("#5").removeClass("price-item-selected");
+              $("#10").removeClass("price-item-selected");
+              $("#20").removeClass("price-item-selected");
+              $("#download-button-win").fadeIn();
+              $("#download-button-linux").fadeIn();
+              $("#download-button-osx").fadeIn();
+              url='https://www.paypal.me/mikepicker/' + $("#custom-price").val();
             } else {
-              $("#download-button").fadeOut();
+              $("#download-button-win").fadeOut();
+              $("#download-button-linux").fadeOut();
+              $("#download-button-osx").fadeOut();
             }
           });
 
