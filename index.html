@@ -20,8 +20,10 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" />
 </head>
 <body>
+  <a class="github-fork-ribbon" href="https://www.patreon.com/onionpacker" title="Support us on Patreon">Support us on Patreon</a>
 	<section class="banner" role="banner">
         <header id="header">
             <div class="header-content clearfix">
@@ -50,7 +52,7 @@
                       <a id="5" class="price-item btn btn-default">€ 5</a>
                       <a id="10" class="price-item btn btn-default">€ 10</a>
                       <a id="20" class="price-item btn btn-default">€ 20</a>
-                      <input id="custom-price" class="price-item" type="text" value="€ custom"
+                      <input id="custom-price" class="price-item" type="text" value="€ custom / free"
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
                     </div>
                     <div class="download-button-container">
@@ -334,7 +336,7 @@
           });
 
           $("#20").click(function() {
-            $("#custom-price").val('€ custom');
+            $("#custom-price").val('€ custom / free');
             $("#20").addClass("price-item-selected");
             $("#10").removeClass("price-item-selected");
             $("#5").removeClass("price-item-selected");
@@ -355,7 +357,7 @@
           });
 
           $("#custom-price").focus(function() {
-            if ($("#custom-price").val() === '€ custom') {
+            if ($("#custom-price").val() === '€ custom / free') {
               $("#custom-price").val('');
             }
           });
@@ -374,7 +376,7 @@
 
           $("#custom-price").focusout(function() {
             if ($("#custom-price").val().length === 0) {
-              $("#custom-price").val('€ custom');
+              $("#custom-price").val('€ custom / free');
             }
           });
 
