@@ -49,10 +49,10 @@
                     <hr class="header-divider"/>
                     <div class="price-text">Name your price</div>
                     <div class="prices">
+                      <a id="free" class="price-item btn btn-default">FREE</a>
                       <a id="5" class="price-item btn btn-default">€ 5</a>
                       <a id="10" class="price-item btn btn-default">€ 10</a>
-                      <a id="20" class="price-item btn btn-default">€ 20</a>
-                      <input id="custom-price" class="price-item" type="text" value="€ custom / free"
+                      <input id="custom-price" class="price-item" type="text" value="€ custom"
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
                     </div>
                     <div class="download-button-container">
@@ -300,7 +300,7 @@
         function goToUrl(url) {
             setTimeout(function() {
                 window.location.href = url;
-            }, 1000);
+            }, 2000);
         }
 
         function showDownload() {
@@ -319,10 +319,19 @@
 
           var url;
 
+          $("#free").click(function() {
+            $("#custom-price").val('€ custom');
+            $("#free").addClass("price-item-selected");
+            $("#10").removeClass("price-item-selected");
+            $("#5").removeClass("price-item-selected");
+            showDownload();
+            url = 'https://www.paypal.me/mikepicker/1'
+          });
+
           $("#5").click(function() {
             $("#5").addClass("price-item-selected");
             $("#10").removeClass("price-item-selected");
-            $("#20").removeClass("price-item-selected");
+            $("#free").removeClass("price-item-selected");
             showDownload();
             url = 'https://www.paypal.me/mikepicker/5'
           });
@@ -330,18 +339,9 @@
           $("#10").click(function() {
             $("#10").addClass("price-item-selected");
             $("#5").removeClass("price-item-selected");
-            $("#20").removeClass("price-item-selected");
+            $("#free").removeClass("price-item-selected");
             showDownload();
             url = 'https://www.paypal.me/mikepicker/10'
-          });
-
-          $("#20").click(function() {
-            $("#custom-price").val('€ custom / free');
-            $("#20").addClass("price-item-selected");
-            $("#10").removeClass("price-item-selected");
-            $("#5").removeClass("price-item-selected");
-            showDownload();
-            url = 'https://www.paypal.me/mikepicker/20'
           });
 
           $("#download-button-win").click(function() {
@@ -357,7 +357,7 @@
           });
 
           $("#custom-price").focus(function() {
-            if ($("#custom-price").val() === '€ custom / free') {
+            if ($("#custom-price").val() === '€ custom') {
               $("#custom-price").val('');
             }
           });
@@ -366,7 +366,7 @@
             if ($("#custom-price").val().length > 0) {
               $("#5").removeClass("price-item-selected");
               $("#10").removeClass("price-item-selected");
-              $("#20").removeClass("price-item-selected");
+              $("#free").removeClass("price-item-selected");
               showDownload();
               url='https://www.paypal.me/mikepicker/' + $("#custom-price").val();
             } else {
@@ -376,7 +376,7 @@
 
           $("#custom-price").focusout(function() {
             if ($("#custom-price").val().length === 0) {
-              $("#custom-price").val('€ custom / free');
+              $("#custom-price").val('€ custom');
             }
           });
 
